@@ -43,7 +43,7 @@ app.use("/cart/decrement/:productId", verifyToken, decrementCartItem);
 app.use('/cartItemDelete/:id',verifyToken,handleDelete);
 app.use('/order',verifyToken,orderRouter);
 app.get("/",(req,res)=>{
-  res.send("Api Working")
+  res.status(201).json("Api Working");
 })
 
 app.listen(port,()=>{
